@@ -1,38 +1,121 @@
-.App {
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+input {
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid black;
+}
+
+.loading {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hidden {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.circle {
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.circle span:nth-child(1) {
+    background-color: black;
+    position: absolute;
+    display: block;
+    height: 4px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    width: 30px;
+}
+
+.circle span:nth-child(2) {
+  background-color: black;
+  position: absolute;
+  display: block;
+  height: 4px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 1;
+  transform: rotate(90deg);
+  width: 30px;
+}
+
+.wrapper {
+  padding: 24px;
+  height: 100%;
+  border: 1px solid #909090;
+  border-radius: 7px;
+}
+
+.add {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper button {
+  display: block;
+  margin: 18px auto 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  display: flex;
+  flex-direction: column;  
+  margin: 12px 0;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 6px 14px;
+  border: none;
+  background-color: rgb(99, 224, 255);
+  border-radius: 7px;
+  margin-top: 12px;
+  height: fit-content;
+}
+
+button:hover {
+  background-color: rgb(40, 212, 255);
+}
+
+i {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+}
+
+i:hover {
+  transform: scale(1.5);
 }
