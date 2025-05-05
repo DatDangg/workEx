@@ -70,7 +70,7 @@ function UserList() {
                     </div>
                     <Pagination
                         data={filteredList}
-                        itemsPerPage={10}
+                        itemsPerPage={11}
                         handleClick={handleClick}
                         handleCreate={() => setModalOpen(true)}
                     />

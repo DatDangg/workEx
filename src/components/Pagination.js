@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
+import UserCard from './UserCard';
 
 export const Pagination = ({ data, itemsPerPage, handleClick, handleCreate }) => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -26,14 +27,8 @@ export const Pagination = ({ data, itemsPerPage, handleClick, handleCreate }) =>
                         <div className='circle-add'>Add user</div>
                     </div>
                 </div>
-                {currentItems.map(list => (
-                    <div key={list.id} className='col-lg-3' style={{ margin: '12px 0' }}>
-                        <div className='wrapper'>
-                            <div>Name: {list.name}</div>
-                            <div>Age: {list.age}</div>
-                            <button onClick={() => handleClick(list.id)}>View detail</button>
-                        </div>
-                    </div>
+                {currentItems.map(user => (
+                    <UserCard key={user.id} user={user} onClick={handleClick} />
                 ))}
             </div>
 
